@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-import ejerciciosRepaso_3EVA.Paises2;
 
 /**
  * 
@@ -26,9 +25,6 @@ public class Main {
 		int sin = 0;
 		int suma = 0;
 		ArrayList<Divorcio> divorcios = new ArrayList<Divorcio>();
-
-		// para poder leer un archivo hay que crear un objeto de clase file con la ruta
-		// del archivo
 		String nombre = "C:\\Users\\Gestor\\eclipse-workspace\\Programacion\\src\\examen_3EVA_Ejercicio2\\Divorcios.csv";
 		File file = new File(nombre);
 		try {
@@ -59,7 +55,7 @@ public class Main {
 						sin++;
 					}
 					// else if(linesep[i].equalsIgnoreCase("no"))
-					//System.out.println(linesep[2]);
+					// System.out.println(linesep[2]);
 				}
 
 //				int posicion = buscarProvincia(divorcios, linesep[0]);
@@ -71,15 +67,13 @@ public class Main {
 //				}
 
 			}
-			
+
 			f.close();
 			System.out.println("El número total de divorcios CON separación previa en el año 2019 es: " + con);
 			System.out.println("El número total de divorcios SIN separación previa en el año 2018 es: " + sin);
 			System.out.println("---------------------");
 			Collections.sort(divorcios);
-//			for (int i = 0; i < divorcios.size(); i++) {
-//				System.out.println(divorcios.get(i).getCiudad());
-//			}
+
 		} catch (FileNotFoundException e) {
 			System.out.println("El fichero " + nombre + " no ha podido ser abierto.");
 		}

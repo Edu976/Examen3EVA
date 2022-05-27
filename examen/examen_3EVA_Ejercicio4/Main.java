@@ -16,14 +16,14 @@ public class Main {
 		// tablaMultiplicar(numero, indice);
 		tablaMultiplicar(numero, indice);
 	}
-	
+
 	public static void tablaMultiplicar(int numero, int indice) {
-		//System.out.println("indice " + indice + " " + "numero " + numero);
+		// System.out.println("indice " + indice + " " + "numero " + numero);
 		if ((indice) > 1) {
 			tablaMultiplicar(numero, indice - 2);
 
 		}
-		System.out.println("\t" + numero + " x " + indice + " = " + (numero * indice));
+		System.out.println(numero + " * " + indice + " = " + (numero * indice));
 
 	}
 }
