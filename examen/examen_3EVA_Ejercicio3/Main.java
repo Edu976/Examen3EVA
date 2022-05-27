@@ -3,6 +3,13 @@ package examen_3EVA_Ejercicio3;
 import node_simpleLinkedList.Node;
 import node_simpleLinkedList.SimpleLinkedList;
 
+/**
+ * pre:---
+ * post: en este metodo implementaremos a la simple Linked List un método para eliminar el nodo
+ * 		cuyo contenido sea mayor que el resto
+ *
+ */
+
 public class Main {
 	public static void main(String[] args) {
 		SimpleLinkedList l = new SimpleLinkedList();
@@ -19,12 +26,5 @@ public class Main {
 		l.show();
 		System.out.println("------------------------------");
 
-		// Node n20 = l.get(1300);
-//		if(n20 != null) {
-//			System.out.println(n20.toString());
-//		}
-//		else {
-//			System.out.println("Este nodo es nulo");
-//		}
 	}
 }

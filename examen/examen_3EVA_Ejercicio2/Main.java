@@ -10,7 +10,8 @@ import ejerciciosRepaso_3EVA.Paises2;
 
 /**
  * 
- * pre:--- post: En esta clase de java vamos a leer un fichero, del cual vamos a
+ * pre:--- 
+ * post: En esta clase de java vamos a leer un fichero, del cual vamos a
  * sacar una lista de palabras que empiezan o acaban por una letra que le
  * indicamos y la linea en la que se encuentran, por último las añadiremos a una
  * base de datos
@@ -61,14 +62,13 @@ public class Main {
 					//System.out.println(linesep[2]);
 				}
 
-				int posicion = buscarProvincia(divorcios, linesep[0]);
-				if(posicion == 1) {
-					// paises.get(posicion).setContador(paises.get(posicion).getContador() + 1);
-					divorcios.get(sin);
-				}
-				else {
-					divorcios.add(new Divorcio(linesep[0], 1));
-				}
+//				int posicion = buscarProvincia(divorcios, linesep[0]);
+//				if(posicion == 1) {
+//					divorcios.get(posicion).setContador(divorcios.get(posicion).getContador() + 1);
+//				}
+//				else {
+//					divorcios.add(new Divorcio(linesep[0], 1));
+//				}
 
 			}
 			
@@ -77,9 +77,9 @@ public class Main {
 			System.out.println("El número total de divorcios SIN separación previa en el año 2018 es: " + sin);
 			System.out.println("---------------------");
 			Collections.sort(divorcios);
-			for (int i = 0; i < divorcios.size(); i++) {
-				System.out.println(divorcios.get(i).getCiudad());
-			}
+//			for (int i = 0; i < divorcios.size(); i++) {
+//				System.out.println(divorcios.get(i).getCiudad());
+//			}
 		} catch (FileNotFoundException e) {
 			System.out.println("El fichero " + nombre + " no ha podido ser abierto.");
 		}
@@ -87,7 +87,7 @@ public class Main {
 
 	public static int buscarProvincia(ArrayList<Divorcio> divorcios, String provincia) {
 		for (int i = 0; i < divorcios.size(); i++) {
-			if (divorcios.get(i).ciudad.equalsIgnoreCase(provincia)) {
+			if (divorcios.get(i).getCiudad().equalsIgnoreCase(provincia)) {
 				return 1;
 			}
 		}
